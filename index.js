@@ -6,6 +6,14 @@ function takeANumber(line, customer){
   return `Welcome, ${customer}. You are number ${line.length} in line.`
 }
 
+num = 0;
+
+function takeANumber2 (line) {
+ num++;
+  line.push(num);
+ return `Welcome, you are number: ${num}`;
+}
+
 //Return name of customer being served, then remove them from the queue 
 
 function nowServing(line) {
@@ -26,7 +34,7 @@ function currentLine(line){
   var peopleAndNumber = [];
   
   for(var i=0; i<line.length; i++) {
-   peopleAndNumber.push(i+1 + ". "+ line[i]);
+   peopleAndNumber.push((i+1) + ". "+ line[i]);
   }
   return `The line is currently: ${peopleAndNumber.join(', ')}`;
   }
